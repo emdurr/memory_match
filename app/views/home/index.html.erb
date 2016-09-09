@@ -8,10 +8,10 @@
 	</div>
 	<div class="row center-align">
 		<% counter = 1 %>
-		<% @numbers.each do |num| %>
-			<div class="col s2 card valign-wrapper" id="<%=num%>_<%=counter%>" >
+		<% @photos.each do |photo| %>
+			<div class="col s2 card valign-wrapper" id="<%=photo%>_<%=counter%>" >
 				<div class="back valign">
-					<%= num %>
+					<%= image_tag(photo, class:'pic') %>
 				</div>
 				<div class="front">
 					<%= image_tag('background_pic.jpg', class:'pic') %>

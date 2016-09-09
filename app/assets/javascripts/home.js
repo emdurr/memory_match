@@ -21,7 +21,7 @@ $(document).ready( function() {
 					cardNum2 = undefined;
 					card2 = undefined;
 				} else {
-					if(cardNum2[0] === cardNum[0]) {
+					if(cardNum2[7] === cardNum[7]) {
 						$('.match').slideDown(function() {
     					setTimeout(function() {
         				$('.match').slideUp();
