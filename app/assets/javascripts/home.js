@@ -3,6 +3,7 @@ $(document).ready( function() {
 	var cardNum2;
 	var card;
 	var card2;
+	var counter = 0;
 	var resetButton = $('.reset_button');
 	$(".card").flip();
 	$('.card').on('click', function() {
@@ -11,18 +12,15 @@ $(document).ready( function() {
 		} else {
 			if(cardNum === undefined) {
 				card = $(this);
-				// card.removeClass('front');
 				cardNum = card.first().attr('id');
 			} else if(cardNum2 === undefined) {
 				card2 = $(this);
 				cardNum2 = card2.last().attr('id');
-
 				if(cardNum === cardNum2) {
 					alert("You've already chosen this card. Choose a different card");
 					cardNum2 = undefined;
 					card2 = undefined;
 				} else {
-					// card2.removeClass('front');
 					if(cardNum2[0] === cardNum[0]) {
 						$('.match').slideDown(function() {
     					setTimeout(function() {
@@ -33,6 +31,11 @@ $(document).ready( function() {
 						cardNum2 = undefined;
 						card.addClass('matched');
 						card2.addClass('matched');
+						counter += 1;
+						if(counter === 8) {
+							alert("You've won!! Play again!");
+							location.reload();
+						}
 					} else {
 						$('.no_match').slideDown(function() {
     					setTimeout(function() {
@@ -44,7 +47,6 @@ $(document).ready( function() {
 								card2.flip(false);
 							}, 1000);
 						});
-						// card2.flip(false);
 						cardNum = undefined;
 						cardNum2 = undefined;
 					}
