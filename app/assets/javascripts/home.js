@@ -22,11 +22,15 @@ $(document).ready( function() {
 					card2 = undefined;
 				} else {
 					if(cardNum2[7] === cardNum[7]) {
-						$('.match').slideDown(function() {
-    					setTimeout(function() {
-        				$('.match').slideUp();
-    					}, 1000);
-						});
+						var w = window.open('','','width=200,height=200')
+							w.document.write('<h1>Match!!</h1>')
+							w.focus()
+							setTimeout(function() {w.close();}, 1000)
+						// $('.match').slideDown(function() {
+    		// 			setTimeout(function() {
+      //   				$('.match').slideUp();
+    		// 			}, 1000);
+						// });
 						cardNum = undefined;
 						cardNum2 = undefined;
 						card.addClass('matched');
@@ -37,11 +41,15 @@ $(document).ready( function() {
 							location.reload();
 						}
 					} else {
-						$('.no_match').slideDown(function() {
-    					setTimeout(function() {
-        				$('.no_match').slideUp();
-    					}, 1000);
-						});
+						var w = window.open('','','width=200,height=200')
+							w.document.write('<h1>No Match!!</h1>')
+							w.focus()
+							setTimeout(function() {w.close();}, 1000)
+						// $('.no_match').slideDown(function() {
+    		// 			setTimeout(function() {
+      //   				$('.no_match').slideUp();
+    		// 			}, 1000);
+						// });
 						card.flip(false, function() {
 							setTimeout(function() {
 								card2.flip(false);
