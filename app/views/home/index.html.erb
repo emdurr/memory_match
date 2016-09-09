@@ -1,0 +1,25 @@
+<h1 class="center-align">Memory Match</h1>
+<div class="container" width="960px">
+	<div class="match">
+		<h4>Match</h4>
+	</div>
+	<div class="no_match">
+		<h4>Not a Match</h4>
+	</div>
+	<div class="row center-align">
+		<% counter = 1 %>
+		<% @numbers.each do |num| %>
+			<div class="col s2 card valign-wrapper" id="<%=num%>_<%=counter%>" >
+				<div class="back valign">
+					<%= num %>
+				</div>
+				<div class="front">
+					<%= image_tag('background_pic.jpg', class:'pic') %>
+				</div>
+			</div>
+			<% counter += 1 %>
+		<% end %>
+		<br>
+		<button class="btn reset_button">Reset</button>
+	</div>
+</div>

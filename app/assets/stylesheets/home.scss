@@ -1,0 +1,43 @@
+body {
+	background-color: black;
+	color: white;
+}
+
+.card {
+	height: 100px;
+	cursor: pointer;
+	margin: 10px 70px;
+}
+
+.front {
+	/*background-image: url('background_pic.jpg');*/
+	/*background-size: 100%;*/
+	padding-top: 8px;
+	padding-right: 15px;
+}
+
+.back {
+	color: black !important;
+}
+.pic {
+	width: auto;
+	height: 82px;
+}
+
+.match {
+	display: none;
+}
+
+.no_match {
+	display: none;
+}
+
+.matched {
+	background-color: black;
+
+}
+
+.txt {
+	margin-left: 50px;
+	
+}
